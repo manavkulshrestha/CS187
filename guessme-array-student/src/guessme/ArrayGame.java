@@ -8,10 +8,8 @@ public class ArrayGame {
 	// stores the next number to guess
 	private int guess;
 	private int[] priorGuesses;
-	boolean de;
-//	private boolean[] notCandidates;
+	private boolean[] eliminated;
 
-    private boolean[] candidates;
 	// TODO: declare additional data members, such as arrays that store
 	// prior guesses, eliminated candidates etc.
 
@@ -29,23 +27,15 @@ public class ArrayGame {
 	// ArrayGame constructor method
 	public ArrayGame() {
 		this.guess = 1000;
-//        this.notCandidates = new boolean[9000];
+		this.eliminated = new boolean[9000];
         this.priorGuesses = new int[0];
-
-        this.candidates = new boolean[10000];
-        for(int i=1000; i<10000; i++)
-            candidates[i] = true;
     }
 	
 	// Resets data members and game state so we can play again
 	public void reset() {
         this.guess = 1000;
-//        this.notCandidates = new boolean[9000];
         this.priorGuesses = new int[0];
-
-        this.candidates = new boolean[10000];
-        for(int i=1000; i<10000; i++)
-            candidates[i] = true;
+		this.eliminated = new boolean[9000];
 	}
 	
 	// Returns true if n is a prior guess; false otherwise.
@@ -88,12 +78,7 @@ public class ArrayGame {
 	public boolean isOver() {
 		if(isPriorGuess(this.guess))
 		    return true;
-
-		//probably covered?
-        for(int i=1000; i<candidates.length; i++)
-            if(candidates[i])
-                return false;
-        return true;
+		return false;
 	}
 	
 	// Returns the guess number and adds it to the list of prior guesses.
@@ -117,46 +102,31 @@ public class ArrayGame {
 	 * have been eliminated (indicating a state of error);
 	 */
 	public boolean updateGuess(int nmatches) {
-//        for(int i=1000; i<=9999; i++) {
-//            if(!this.notCandidates[i-1000]) {
-//                if(numMatches(i, this.guess) != nmatches)
-//                    this.notCandidates[i-1000] = true;
-//                else
-//                    this.guess = i;
-//            }
-//        }
-//
-//        //error state
-//        for(boolean notCandidate: notCandidates)
-//            if(!notCandidate)
-//                return true;
-//		return false;
         boolean nextGuessEstablished = false;
         int nextGuess = -1;
+        final int OFFSET = 1000;
 
-        for(int i=1000; i<=9999; i++) {
-            if(i==4321)
-                de = false;
-            if(this.candidates[i]) {
-                if(numMatches(i, this.guess) == nmatches) {
+        for(int i=0; i<eliminated.length; i++) {
+			if(!eliminated[i]) {
+                if(numMatches(i+OFFSET, this.guess) == nmatches) {
                     if(!nextGuessEstablished) {
                         nextGuessEstablished = true;
-                        nextGuess = i;
+                        nextGuess = i+OFFSET;
                     }
-                } else {
-                    this.candidates[i] = false;
-                }
-            }
-        }
+                } else
+                    this.eliminated[i] = true;
+			}
+		}
 
         if(nextGuess == -1)
             return false;
         this.guess = nextGuess;
 
-        for(int i=1000; i<candidates.length; i++)
-            if(candidates[i])
+        for(boolean e: eliminated)
+            if(!e)
                 return true;
         return false;
+
 	}
 	
 	// Returns the list of guesses so far as an integer array.
