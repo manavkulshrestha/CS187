@@ -26,46 +26,42 @@ import java.util.Iterator;
 
 public class LinkedSet<E> implements Set<E> {
     private LinkedNode<E> head;
-    private LinkedNode<E> tail;
-    private int size;
 
     // Constructors
     public LinkedSet() {
         this.head = null;
-        this.tail = head;
-        this.size = 0;
     }
 
     public LinkedSet(E e) {
-        this.head = new LinkedNode<E>(e, null);
-        this.tail = head;
-        this.size = 1;
+        this.head = new LinkedNode<>(e, null);
     }
 
     private LinkedSet(LinkedNode<E> head) {
         this.head = head;
-        this.tail = head;
-        this.size = 1;
     }
 
     @Override
     public int size() {
-        return this.size;
+        int size = 0;
+
+        for(E e: this)
+            size++;
+
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return (this.size == 0);
+        return (this.head == null);
     }
 
     @Override
     public Iterator<E> iterator() {
-        return new LinkedNodeIterator<E>(this.head);
+        return new LinkedNodeIterator<>(this.head);
     }
 
     @Override
     public boolean contains(Object o) {
-        // TODO (3)
         for(LinkedNode<E> iter = this.head; iter != null; iter = iter.getNext())
             if(iter.getData().equals(o))
                 return true;
@@ -87,38 +83,52 @@ public class LinkedSet<E> implements Set<E> {
 
     @Override
     public Set<E> adjoin(E e) {
-        // TODO (6)
         if(this.contains(e))
-            return this;
-
-
-        
-        this.size++;
-        return null;
+            return new LinkedSet<>(this.head);
+        return new LinkedSet<>(new LinkedNode<>(e, this.head));
     }
 
     @Override
     public Set<E> union(Set<E> that) {
-        for(LinkedNode<E> iter = this.head; iter != null; iter = iter.getNext())
-            this.adjoin(iter.getData());
-        return this;
+        Set<E> union = new LinkedSet<>(this.head);
+
+        for(E e: that)
+            union = union.adjoin(e);
+
+        return union;
     }
 
     @Override
     public Set<E> intersect(Set<E> that) {
-        // TODO (8)
-        return null;
+        Set<E> intersection = new LinkedSet<>();
+
+        for(E e: that)
+            if(this.contains(e))
+                intersection = intersection.adjoin(e);
+
+        return intersection;
     }
 
     @Override
     public Set<E> subtract(Set<E> that) {
-        // TODO (9)
-        return null;
+        Set<E> subtracted = new LinkedSet<>();
+
+        for(E e: this)
+            if(!that.contains(e))
+                subtracted = subtracted.adjoin(e);
+
+        return subtracted;
     }
 
     @Override
     public Set<E> remove(E e) {
-        // TODO (10)
+        //optimization possible?
+        Set<E> ret = new LinkedSet<>();
+
+        for(E entry: this)
+            if(!entry.equals(e))
+                ret = ret.adjoin(e);
+
         return null;
     }
 
