@@ -232,6 +232,8 @@ public class PublicLinkedSetTest {
   @Test
   
   public void testRemove() {
+    Set<String> setx = set3.adjoin("e");
+    Set<String> sety = set1.remove("c");
     assertEquals(set3.adjoin("e"), set1.remove("c"));
   }
 }

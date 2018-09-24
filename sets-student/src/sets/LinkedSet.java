@@ -122,14 +122,13 @@ public class LinkedSet<E> implements Set<E> {
 
     @Override
     public Set<E> remove(E e) {
-        //optimization possible?
         Set<E> ret = new LinkedSet<>();
 
         for(E entry: this)
             if(!entry.equals(e))
-                ret = ret.adjoin(e);
+                ret = ret.adjoin(entry);
 
-        return null;
+        return ret;
     }
 
     @Override

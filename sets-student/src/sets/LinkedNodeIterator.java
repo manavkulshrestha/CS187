@@ -16,14 +16,17 @@ class LinkedNodeIterator<E> implements Iterator<E> {
     @Override
     public boolean hasNext() {
         // TODO (3)
-        return (this.iter.getNext() != null);
+        return (this.iter != null);
     }
 
     @Override
     public E next() {
         // TODO (4)
-        if(this.hasNext())
-            return this.iter.getNext().getData();
+        if(this.hasNext()) {
+          E ret = this.iter.getData();
+          this.iter = iter.getNext();
+          return ret;
+        }
         throw new NoSuchElementException();
     }
 
