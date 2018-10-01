@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * A collection that contains no duplicate elements.  More formally,
  * a set contains no pair of elements <code>e1</code> and
- * <code>e2</code> such that <code>e1.equals(e2)</code> is true, and
+ * <code>e2</ecode> such that <code>e1.equals(e2)</code> is true, and
  * and at most one null element (for the simple reason that if it had
  * contained two null elements, they would have been duplicates).
  *
