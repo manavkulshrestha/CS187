@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InfixEvaluator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InfixEvaluator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/evaluator/InfixEvaluator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="193">
+              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -30,7 +30,7 @@
       <file leaf-file-name="ArithParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/support/parser/ArithParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="51">
               <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
@@ -40,8 +40,8 @@
       <file leaf-file-name="LinkedStack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stack/LinkedStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+            <state relative-caret-position="291">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="e#869#870#0" expanded="true" />
                 <element signature="e#899#900#0" expanded="true" />
@@ -53,18 +53,28 @@
       <file leaf-file-name="Evaluator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/support/evaluator/Evaluator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PublicInfixEvaluatorTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PublicInfixEvaluatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/evaluator/PublicInfixEvaluatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="163" column="5" lean-forward="true" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
+            <state relative-caret-position="-1548">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Assert.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -89,8 +99,8 @@
         <option value="$PROJECT_DIR$/src/evaluator/PostfixEvaluator.java" />
         <option value="$PROJECT_DIR$/src/stack/LinkedStack.java" />
         <option value="$PROJECT_DIR$/src/stack/LLNode.java" />
-        <option value="$PROJECT_DIR$/src/evaluator/InfixEvaluator.java" />
         <option value="$PROJECT_DIR$/test/evaluator/PublicInfixEvaluatorTest.java" />
+        <option value="$PROJECT_DIR$/src/evaluator/InfixEvaluator.java" />
       </list>
     </option>
   </component>
@@ -199,7 +209,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PublicInfixEvaluatorTest.complexTest">
+  <component name="RunManager" selected="JUnit.PublicInfixEvaluatorTest">
+    <configuration name="InfixEvaluator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="evaluator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="evaluator.InfixEvaluator" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="postandinfix-student" />
+      <envs />
+    </configuration>
     <configuration name="PostfixEvaluator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -257,31 +286,6 @@
       <option name="PACKAGE_NAME" value="evaluator" />
       <option name="MAIN_CLASS_NAME" value="evaluator.PublicInfixEvaluatorTest" />
       <option name="METHOD_NAME" value="complexTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="PublicInfixEvaluatorTest.testEvaluateSub" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="evaluator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="postandinfix-student" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="evaluator" />
-      <option name="MAIN_CLASS_NAME" value="evaluator.PublicInfixEvaluatorTest" />
-      <option name="METHOD_NAME" value="testEvaluateSub" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -402,18 +406,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.testEvaluateSub" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.testParentheses" />
-      <item index="3" class="java.lang.String" itemvalue="Application.PostfixEvaluator" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.complexTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.testParentheses" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PostfixEvaluator" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.complexTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.InfixEvaluator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.complexTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.PostfixEvaluator" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.testParentheses" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.testEvaluateSub" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.complexTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.InfixEvaluator" />
+        <item index="3" class="java.lang.String" itemvalue="Application.PostfixEvaluator" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PublicInfixEvaluatorTest.testParentheses" />
       </list>
     </recent_temporary>
   </component>
@@ -434,34 +438,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 36m 18s.xml">
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 09m 27s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 10m 16s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 37m 11s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 37m 24s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 40m 07s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 40m 10s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 42m 21s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest - 2018.10.01 at 04h 46m 42s.xml">
+      <configuration name="PublicInfixEvaluatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 53m 39s.xml">
       <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 37m 33s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 38m 19s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 38m 22s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 40m 41s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 40m 44s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 41m 56s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 44m 04s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 44m 54s.xml">
-      <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 45m 28s.xml">
+    <history-entry file="PublicInfixEvaluatorTest_complexTest - 2018.10.01 at 02h 53m 45s.xml">
       <configuration name="PublicInfixEvaluatorTest.complexTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -511,18 +515,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/evaluator/PublicInfixEvaluatorTest.java</url>
-          <line>137</line>
+          <line>60</line>
           <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/evaluator/PublicInfixEvaluatorTest.java</url>
-          <line>161</line>
-          <properties />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -594,18 +592,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/evaluator/PublicInfixEvaluatorTest.java">
+    <entry file="file://$PROJECT_DIR$/support/parser/ArithParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="163" column="5" lean-forward="true" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stack/LinkedStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="291">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="e#869#870#0" expanded="true" />
             <element signature="e#899#900#0" expanded="true" />
@@ -615,24 +621,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/support/evaluator/Evaluator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/support/parser/ArithParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/evaluator/InfixEvaluator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        <state relative-caret-position="193">
+          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/evaluator/PublicInfixEvaluatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1548">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>

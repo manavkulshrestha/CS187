@@ -161,5 +161,8 @@ public class PublicInfixEvaluatorTest {
 		assertEquals(new Integer(-2147483648), evaluator.evaluate("-2147483647 - 1"));
 		assertEquals(new Integer(2147483646), evaluator.evaluate("2147483647 - 1"));
 		assertEquals(new Integer(22482), evaluator.evaluate("-1 * (-66 - 2 + -1 * 198 - 22222 - (-5 - -4 + -3) + 2 - (9 - 9))"));
+		assertEquals(new Integer(98), evaluator.evaluate("!(!-1 + -99)"));
+		assertEquals(new Integer(0), evaluator.evaluate("0 - 0"));
+		assertEquals(new Integer(0), evaluator.evaluate("!-0 - -0"));
 	}
 }
