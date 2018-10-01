@@ -24,11 +24,14 @@ public class InfixEvaluator extends Evaluator {
 		} else if(token.equals("(")) {
 			operators.push(token);
 		} else if(token.equals(")")) {
-			do {
+			if(operators.top() == null)
+				throw new Exception("missing (");
+			while(!operators.top().equals("(")) {
+				processOperator();
 				if(operators.top() == null)
 					throw new Exception("missing (");
-				processOperator();
-			} while(!operators.top().equals("("));
+			}
+			operators.pop();
 		} else if(operators.isEmpty() || precedence(token)>precedence(operators.top())) {
 			operators.push(token);
 		} else {

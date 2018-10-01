@@ -157,6 +157,7 @@ public class PublicInfixEvaluatorTest {
 	@Test
 	public void complexTest() throws Exception {
 		assertEquals(new Integer(232), evaluator.evaluate("-0 - ((1 * 5) - (9 - 7)) + (100 - 1 * (1 - 51)) - 2 + 87"));
+		//
 		assertEquals(new Integer(-22284), evaluator.evaluate("-66 - 2 - 22222 - (-5 - -4 + -3) + 2 - (9 - 9)"));
 		assertEquals(new Integer(-2147483648), evaluator.evaluate("-2147483647 - 1"));
 		assertEquals(new Integer(2147483646), evaluator.evaluate("2147483647 - 1"));
