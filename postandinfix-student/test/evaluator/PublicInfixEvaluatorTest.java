@@ -155,15 +155,30 @@ public class PublicInfixEvaluatorTest {
 	}
 
 	@Test
-	public void complexTest() throws Exception {
+	public void itestEvaluateSub() throws Exception {
 		assertEquals(new Integer(232), evaluator.evaluate("-0 - ((1 * 5) - (9 - 7)) + (100 - 1 * (1 - 51)) - 2 + 87"));
-		//
 		assertEquals(new Integer(-22284), evaluator.evaluate("-66 - 2 - 22222 - (-5 - -4 + -3) + 2 - (9 - 9)"));
 		assertEquals(new Integer(-2147483648), evaluator.evaluate("-2147483647 - 1"));
 		assertEquals(new Integer(2147483646), evaluator.evaluate("2147483647 - 1"));
 		assertEquals(new Integer(22482), evaluator.evaluate("-1 * (-66 - 2 + -1 * 198 - 22222 - (-5 - -4 + -3) + 2 - (9 - 9))"));
 		assertEquals(new Integer(98), evaluator.evaluate("!(!-1 + -99)"));
-		assertEquals(new Integer(0), evaluator.evaluate("0 - 0"));
+		assertEquals(new Integer(0), evaluator.evaluate("!0 - !0"));
 		assertEquals(new Integer(0), evaluator.evaluate("!-0 - -0"));
+		assertEquals(new Integer(8), evaluator.evaluate("5 - -3"));
+		assertEquals(new Integer(8), evaluator.evaluate("5 - !3"));
+		assertEquals(new Integer(-11000), evaluator.evaluate("1000 - 10000 - 10 - -1 - -1 - 1999 - -7"));
+		assertEquals(new Integer(-1), evaluator.evaluate("3 - 4"));
+
+		//Zhongdong Yu's tests
+		assertEquals(new Integer(-1), evaluator.evaluate("1 - 2"));
+		assertEquals(new Integer(-4), evaluator.evaluate("1 - 2 - 3"));
+		assertEquals(new Integer(889), evaluator.evaluate("1000 - 100 - 10 - 1"));
+		assertEquals(new Integer(8), evaluator.evaluate("5 - -3"));
+		assertEquals(new Integer(0), evaluator.evaluate("0 - 0"));
+		assertEquals(new Integer(-4254), evaluator.evaluate("3566 - 639 - 7839 - -658"));
+		assertEquals(new Integer(8), evaluator.evaluate("8 - -0"));
+		assertEquals(new Integer(11), evaluator.evaluate("7 - -7 - 7 - -7 - 5 - -7 - -5 - 10 - 0"));
+		assertEquals(new Integer(2147483646), evaluator.evaluate("2147483647 - 1"));
+
 	}
 }
