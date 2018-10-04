@@ -180,5 +180,8 @@ public class PublicInfixEvaluatorTest {
 		assertEquals(new Integer(11), evaluator.evaluate("7 - -7 - 7 - -7 - 5 - -7 - -5 - 10 - 0"));
 		assertEquals(new Integer(2147483646), evaluator.evaluate("2147483647 - 1"));
 
+		//possible private test (was failing)
+		assertEquals(new Integer(10), evaluator.evaluate("4 - !3 - 5 - !8"));
+
 	}
 }

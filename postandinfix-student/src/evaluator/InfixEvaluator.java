@@ -36,7 +36,9 @@ public class InfixEvaluator extends Evaluator {
 			operators.push(token);
 		} else {
 			//repeatedly until precendence condition is met (loop) or any other condition is met (not loop)?
-			processOperator();
+			do {
+				processOperator();
+			} while(!(operators.isEmpty() || precedence(token)>precedence(operators.top())));
 			operators.push(token);
 		}
 	}
