@@ -88,69 +88,39 @@ public class LargeInteger {
 	public LargeInteger add(LargeInteger that) {
         //edge case - one of them is null (size 0?)
         if(this.head == null || that.head == null)
-            return this;
+            return null;
 
-	    LLNode<Integer> iter = this.head;
-        LLNode<Integer> longer = that.head;
-        LLNode<Integer> shorter = this.head;
+        String ret = "";
+        LLNode<Integer> shorter = that.head;
+        LLNode<Integer> longer = this.head;
+        int carry = 0;
         if(this.size < that.size) {
             longer = that.head;
             shorter = this.head;
         }
-        int carry = 0;
-        //longer is either the bigger number or both have same digits
 
-        //adding till n-1
-        for(; shorter.link != null; shorter=shorter.link, longer=longer.link, iter=iter.link) {
+        for(; shorter != null; shorter=shorter.link, longer=longer.link) {
             int digitSum = shorter.data+longer.data+carry;
             carry = 0;
-            if(digitSum > 10) {//moding and division slighly more expensive
-                digitSum = 10-digitSum;
+            if(digitSum >= 10) {
+                digitSum = digitSum-10;
                 carry = 1;
             }
 
-            iter.data = digitSum;
+            ret = digitSum+ret;
         }
 
-        //equal size
-        if(this.size == that.size) {
-            int digitSum = shorter.data+longer.data+carry;
-            if(digitSum > 10) {
-                iter.data = 10-digitSum;
-                iter.link = new LLNode<>(1,null);
-
-            } else
-                iter.data = digitSum;
-
-            return this;
-        }
-
-        //one is bigger than the other. if this is bigger, add carry.
-        if(this.size < that.size) {
-            int digitSum = shorter.data+longer.data+carry;
-            if(digitSum > 10) {
-                digitSum = 10-digitSum;
+        for(; longer != null; longer=longer.link) {
+            int digitSum = longer.data+carry;
+            carry = 0;
+            if(digitSum >= 10) {
+                digitSum = digitSum-10;
                 carry = 1;
             }
-            iter.data = digitSum;
-
-            longer=longer.link;
-            iter=iter.link;
-
-            for(; longer != null; longer=longer.link, iter=iter.link) {
-                digitSum = longer.data+iter.data+carry;
-                if(digitSum > 10) {
-                    digitSum = 10-digitSum;
-                    carry = 1;
-                }
-
-                iter.data = digitSum;
-            }
-        } else {
-            iter.data += carry;
+            ret = digitSum+ret;
         }
 
-		return this;
+        return new LargeInteger((carry == 1) ? 1+ret : ret);
 	}
 	
 	/** Returns a new LargeInteger object representing the result of multiplying
@@ -159,13 +129,13 @@ public class LargeInteger {
 	 *  above to accomplish the 'multiply'.
 	 */
 	public LargeInteger multiply(int x) {
-		for(int i=0; i<x; i++) {
-		    this.add(new LargeInteger(this.toString()));
+        LargeInteger product = new LargeInteger("0");
+
+        for(int i=0; i<x; i++) {
+            product = product.add(this);
         }
-        this.size = 0;
-        for(LLNode iter=this.head; iter != null; iter=iter.link)
-            this.size++;
-		return this;
+
+        return product;
 	}
 
 	/** Recursive method that converts the list referenced by curr_node back to

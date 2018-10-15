@@ -29,16 +29,22 @@ public class Fractal {
 			drawLine(p1, p2);
 			return;
 		}
+		Point2D p3,p4,p5;
 
-		Point2D p3 = new Point2D.Double((p2.getX()-p1.getX())/3,(p2.getY()-p1.getY())/3);
-        Point2D p5 = new Point2D.Double(p3.getX()*2,p3.getY()*2);
+        Turtle voldeturt = new Turtle(p1,p2);
+		double side = p1.distance(p2)/3;
 
-//        Point2D p4 = new Point2D.Double((p3.getX()+p5.getX())/2,);
-
-        drawKochCurve(p1, p3, --level);
-//        drawKochCurve(p4, p5, level);
+		voldeturt.move(side);
+		drawKochCurve(p1, p3=voldeturt.getPosition(), --level);
+		voldeturt.turnLeft(60);
+        voldeturt.move(side);
+        drawKochCurve(p3, p4=voldeturt.getPosition(), level);
+        voldeturt.turnRight(120);
+        voldeturt.move(side);
+        drawKochCurve(p4, p5=voldeturt.getPosition(), level);
+        voldeturt.turnLeft(60);
+        voldeturt.move(side);
         drawKochCurve(p5, p2, level);
-
         // TODO
 		// Koch subdivision rule: ___ ->  _/\_
 	}
@@ -49,7 +55,21 @@ public class Fractal {
 			drawLine(p1, p2);
 			return;
 		}
-		// TODO
+		Point2D p3;
+
+        Turtle voldeturt = new Turtle(p1,p2);
+        double d = p1.distance(p2);
+
+        //TODO ask question
+        voldeturt.move(d/3);
+        drawLine(p1, p3 = voldeturt.getPosition());
+        voldeturt.turnLeft(60);
+        voldeturt.move(2*d/3);
+        drawTree(p3, voldeturt.getPosition(), --level);
+        voldeturt.move(-2*d/3);
+        voldeturt.turnRight(75);
+        voldeturt.move(2*d/3);
+        drawTree(p3, voldeturt.getPosition(), level);
 	}
 	
 	// Recursive method for drawing the Sierpinski Triangle given the three points
@@ -59,7 +79,24 @@ public class Fractal {
 			drawTriangle(p1, p2, p3);
 			return;
 		}
-		// TODO
+		drawSierpinskiTriangle(
+		        p1,
+                new Point2D.Double((p1.getX()+p3.getX())/2, (p1.getY()+p3.getY())/2),
+                new Point2D.Double((p1.getX()+p2.getX())/2, (p1.getY()+p2.getY())/2),
+                --level
+        );
+        drawSierpinskiTriangle(
+                p2,
+                new Point2D.Double((p2.getX()+p1.getX())/2, (p2.getY()+p1.getY())/2),
+                new Point2D.Double((p2.getX()+p3.getX())/2, (p2.getY()+p3.getY())/2),
+                level
+        );
+        drawSierpinskiTriangle(
+                p3,
+                new Point2D.Double((p3.getX()+p1.getX())/2, (p3.getY()+p1.getY())/2),
+                new Point2D.Double((p3.getX()+p2.getX())/2, (p3.getY()+p2.getY())/2),
+                level
+        );
 	}
 	
 	// Recursive method for drawing the Sierpinski Carpet given the lower-left corner
@@ -69,7 +106,26 @@ public class Fractal {
 			drawRectangle(p, a, a);
 			return;
 		}
-		// TODO
+		Turtle voldeturt = new Turtle(p, new Point2D.Double(p.getX(),p.getY()+1));
+		a /= 3;
+        drawSierpinskiCarpet(p, a, --level);
+        voldeturt.move(a);
+        drawSierpinskiCarpet(voldeturt.getPosition(), a, level);
+        voldeturt.move(a);
+        drawSierpinskiCarpet(voldeturt.getPosition(), a, level);
+        voldeturt.turnRight(90);
+        voldeturt.move(a);
+        drawSierpinskiCarpet(voldeturt.getPosition(), a, level);
+        voldeturt.move(a);
+        drawSierpinskiCarpet(voldeturt.getPosition(), a, level);
+        voldeturt.turnRight(90);
+        voldeturt.move(a);
+        drawSierpinskiCarpet(voldeturt.getPosition(), a, level);
+        voldeturt.move(a);
+        drawSierpinskiCarpet(voldeturt.getPosition(), a, level);
+        voldeturt.turnRight(90);
+        voldeturt.move(a);
+        drawSierpinskiCarpet(voldeturt.getPosition(), a, level);
 	}
 	
 	// This method is left for you to experiment with creative fractals
