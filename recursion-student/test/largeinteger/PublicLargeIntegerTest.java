@@ -72,6 +72,7 @@ public class PublicLargeIntegerTest {
 	@Test
 	public void testMultiply10() {
 		number = new LargeInteger("15");
+		number.toString();
 		LargeInteger result = number.multiply10();
 		assertTrue(number==result);
 		assertTrue(number.toString().equals("150"));
