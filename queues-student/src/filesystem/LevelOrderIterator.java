@@ -19,7 +19,7 @@ public class LevelOrderIterator extends FileIterator<File> {
 	 * @throws FileNotFoundException if the rootNode does not exist
 	 */
 	public LevelOrderIterator(File rootNode) throws FileNotFoundException {
-        	// TODO 1
+
 	}
 	
 	@Override
