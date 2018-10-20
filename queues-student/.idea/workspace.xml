@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PublicMergeSorterTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PublicMergeSorterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="2453">
+              <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeSorter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MergeSorter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sorting/MergeSorter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="216">
+              <caret line="81" column="16" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -420,15 +420,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 31m 18s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 31m 22s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 32m 10s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 33m 47s.xml">
       <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
     </history-entry>
@@ -439,6 +430,15 @@
       <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 38m 23s.xml">
+      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 47m 08s.xml">
+      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 47m 19s.xml">
+      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 47m 51s.xml">
       <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PublicMergeSorterTest_testMergeSortEmptyUnaliased - 2018.10.20 at 06h 35m 13s.xml">
@@ -463,7 +463,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -557,18 +557,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sorting/MergeSorter.java">
+    <entry file="file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="2453">
+          <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/sorting/MergeSorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="216">
+          <caret line="81" column="16" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
           <folding />
         </state>
       </provider>

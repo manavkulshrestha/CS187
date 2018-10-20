@@ -76,7 +76,7 @@ public class MergeSorter<T extends Comparable<T>> {
 	Queue<T> merge(Queue<T> input1, Queue<T> input2) {
 		Queue<T> output = new Queue<T>();
 
-		while(!(input1.isEmpty() || input2.isEmpty())) {
+		while(!input1.isEmpty() && !input2.isEmpty()) {
 			if(input1.peek().compareTo(input2.peek()) < 0)
 				output.enqueue(input1.dequeue());
 			else
