@@ -72,6 +72,11 @@ public class Queue<T> implements UnboundedQueueInterface<T> {
         return reversed;
 	}
 
+	@Override
+    public String toString() {
+        return (!this.isEmpty()) ? this.front.toString() : "";
+    }
+
 }
 
 class Node<T> {
@@ -81,5 +86,9 @@ class Node<T> {
 	public Node(T data, Node<T> next) {
 		this.data = data; this.next=next;
 	}
+    @Override
+    public String toString() {
+        return this.data+""+((this.next != null) ? ","+this.next : "");
+    }
 }
 
