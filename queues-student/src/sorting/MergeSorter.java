@@ -44,7 +44,7 @@ public class MergeSorter<T extends Comparable<T>> {
         mergeSort(output1);
         mergeSort(output2);
 
-        merge(output1, output2);
+        return merge(output1, output2);
 	}
 
 	/**
