@@ -1,5 +1,8 @@
 package filesystem;
 
+import structures.Queue;
+import structures.UnboundedQueueInterface;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -12,26 +15,44 @@ import java.util.NoSuchElementException;
  * first search.
  */
 public class LevelOrderIterator extends FileIterator<File> {
-	
+    UnboundedQueueInterface<File> iter;
 	/**
 	 * Instantiate a new LevelOrderIterator, rooted at the rootNode.
 	 * @param rootNode
 	 * @throws FileNotFoundException if the rootNode does not exist
 	 */
 	public LevelOrderIterator(File rootNode) throws FileNotFoundException {
+		if(!rootNode.exists())
+			throw new FileNotFoundException();
 
+		iter = new Queue<>();
+        UnboundedQueueInterface<File> queue = new Queue<>();
+
+		queue.enqueue(rootNode);
+
+		while(!queue.isEmpty()) {
+            File file = queue.dequeue();
+            iter.enqueue(file);
+
+            if(file.isDirectory()) {
+                File[] subFiles = file.listFiles();
+                if(subFiles != null) {
+                    Arrays.sort(subFiles);
+                    for(File subFile: subFiles)
+                        queue.enqueue(subFile);
+                }
+            }
+        }
 	}
 	
 	@Override
 	public boolean hasNext() {
-        	// TODO 2
-            return false;
+	    return !iter.isEmpty();
 	}
 
 	@Override
 	public File next() throws NoSuchElementException {
-        	// TODO 3
-            return null;
+	    return iter.dequeue();
 	}
 
 	@Override

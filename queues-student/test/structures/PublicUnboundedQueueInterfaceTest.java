@@ -97,4 +97,22 @@ public class PublicUnboundedQueueInterfaceTest {
 		assertEquals(1, r.size());
 	}
 
+	@Test
+	public void testReversedThreeElements() throws Exception  {
+		Queue<Integer> q = new Queue<>();
+		UnboundedQueueInterface<Integer> r;
+		q.enqueue(1);
+		q.enqueue(2);
+		q.enqueue(3);
+
+		r = q.reversed();
+
+		assertEquals(1, (int)q.dequeue());
+		assertEquals(2, (int)q.dequeue());
+		assertEquals(3, (int)q.dequeue());
+
+		assertEquals(3, (int)r.dequeue());
+		assertEquals(2, (int)r.dequeue());
+		assertEquals(1, (int)r.dequeue());
+	}
 }

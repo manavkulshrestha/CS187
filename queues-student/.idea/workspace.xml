@@ -11,21 +11,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/structures/Queue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="137">
+              <caret line="68" column="43" lean-forward="true" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding>
-                <element signature="e#984#985#0" expanded="true" />
-                <element signature="e#1017#1018#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
-                <element signature="e#1938#1939#0" expanded="true" />
-                <element signature="e#2007#2008#0" expanded="true" />
-                <element signature="e#2226#2227#0" expanded="true" />
-                <element signature="e#2304#2305#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#1761#1762#0" expanded="true" />
+                <element signature="e#1808#1809#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublicUnboundedQueueInterfaceTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/structures/PublicUnboundedQueueInterfaceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -33,28 +40,8 @@
       <file leaf-file-name="PublicLevelOrderIteratorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/filesystem/PublicLevelOrderIteratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1622">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublicUnboundedQueueInterfaceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/structures/PublicUnboundedQueueInterfaceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="73" column="6" lean-forward="false" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublicMergeSorterTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2453">
-              <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+            <state relative-caret-position="-1378">
+              <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -70,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeSorter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sorting/MergeSorter.java">
+      <file leaf-file-name="LevelOrderIterator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/filesystem/LevelOrderIterator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="81" column="16" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+            <state relative-caret-position="360">
+              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -83,18 +70,18 @@
       <file leaf-file-name="File.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/File.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="1205" column="29" lean-forward="false" selection-start-line="1205" selection-start-column="18" selection-end-line="1205" selection-end-column="29" />
+            <state relative-caret-position="141">
+              <caret line="1209" column="0" lean-forward="false" selection-start-line="1209" selection-start-column="0" selection-end-line="1209" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnboundedQueueInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/support/structures/UnboundedQueueInterface.java">
+      <file leaf-file-name="FileIterator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/support/filesystem/FileIterator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,11 +105,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/filesystem/LevelOrderIterator.java" />
         <option value="$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java" />
+        <option value="$PROJECT_DIR$/src/sorting/MergeSorter.java" />
+        <option value="$PROJECT_DIR$/test/filesystem/PublicLevelOrderIteratorTest.java" />
+        <option value="$PROJECT_DIR$/src/filesystem/LevelOrderIterator.java" />
         <option value="$PROJECT_DIR$/test/structures/PublicUnboundedQueueInterfaceTest.java" />
         <option value="$PROJECT_DIR$/src/structures/Queue.java" />
-        <option value="$PROJECT_DIR$/src/sorting/MergeSorter.java" />
       </list>
     </option>
   </component>
@@ -145,9 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,6 +173,17 @@
             <path>
               <item name="queues-student" type="b2602c69:ProjectViewProjectNode" />
               <item name="queues-student" type="462c0819:PsiDirectoryNode" />
+              <item name="support" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="queues-student" type="b2602c69:ProjectViewProjectNode" />
+              <item name="queues-student" type="462c0819:PsiDirectoryNode" />
+              <item name="support" type="462c0819:PsiDirectoryNode" />
+              <item name="filesystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="queues-student" type="b2602c69:ProjectViewProjectNode" />
+              <item name="queues-student" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -212,7 +208,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,19 +232,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PublicMergeSorterTest">
-    <configuration name="PublicMergeSorterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PublicUnboundedQueueInterfaceTest.testReversedThreeElements">
+    <configuration name="PublicLevelOrderIteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="sorting.*" />
+          <option name="PATTERN" value="filesystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="queues-student" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="sorting" />
-      <option name="MAIN_CLASS_NAME" value="sorting.PublicMergeSorterTest" />
+      <option name="PACKAGE_NAME" value="filesystem" />
+      <option name="MAIN_CLASS_NAME" value="filesystem.PublicLevelOrderIteratorTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -259,19 +258,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="PublicMergeSorterTest.testMergeSortEmptyUnaliased" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PublicLevelOrderIteratorTest.testEmptyDirectoryException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="sorting.*" />
+          <option name="PATTERN" value="filesystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="queues-student" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="sorting" />
-      <option name="MAIN_CLASS_NAME" value="sorting.PublicMergeSorterTest" />
-      <option name="METHOD_NAME" value="testMergeSortEmptyUnaliased" />
+      <option name="PACKAGE_NAME" value="filesystem" />
+      <option name="MAIN_CLASS_NAME" value="filesystem.PublicLevelOrderIteratorTest" />
+      <option name="METHOD_NAME" value="testEmptyDirectoryException" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -284,7 +283,57 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="PublicUnboundedQueueInterfaceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PublicLevelOrderIteratorTest.testLeafDirIterator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="filesystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="queues-student" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="filesystem" />
+      <option name="MAIN_CLASS_NAME" value="filesystem.PublicLevelOrderIteratorTest" />
+      <option name="METHOD_NAME" value="testLeafDirIterator" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="PublicMergeSorterTest.testMergeSortUnaliased" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="sorting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="queues-student" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="sorting" />
+      <option name="MAIN_CLASS_NAME" value="sorting.PublicMergeSorterTest" />
+      <option name="METHOD_NAME" value="testMergeSortUnaliased" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="structures.*" />
@@ -296,8 +345,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="structures" />
       <option name="MAIN_CLASS_NAME" value="structures.PublicUnboundedQueueInterfaceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testReversedThreeElements" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -390,16 +439,20 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.PublicMergeSorterTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PublicUnboundedQueueInterfaceTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PublicMergeSorterTest.testMergeSortEmptyUnaliased" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.PublicLevelOrderIteratorTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PublicLevelOrderIteratorTest.testEmptyDirectoryException" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PublicLevelOrderIteratorTest.testLeafDirIterator" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PublicMergeSorterTest.testMergeSortUnaliased" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PublicUnboundedQueueInterfaceTest.testReversedThreeElements" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PublicMergeSorterTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PublicMergeSorterTest.testMergeSortEmptyUnaliased" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PublicUnboundedQueueInterfaceTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PublicUnboundedQueueInterfaceTest.testReversedThreeElements" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PublicLevelOrderIteratorTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PublicLevelOrderIteratorTest.testLeafDirIterator" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PublicLevelOrderIteratorTest.testEmptyDirectoryException" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PublicMergeSorterTest.testMergeSortUnaliased" />
       </list>
     </recent_temporary>
   </component>
@@ -420,67 +473,67 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 33m 47s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 35m 35s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 33m 50s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 36m 07s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 34m 55s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 37m 31s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 38m 23s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 38m 16s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 47m 08s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 38m 20s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 47m 19s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 45m 16s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest - 2018.10.20 at 06h 47m 51s.xml">
-      <configuration name="PublicMergeSorterTest" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 45m 19s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest_testMergeSortEmptyUnaliased - 2018.10.20 at 06h 35m 13s.xml">
-      <configuration name="PublicMergeSorterTest.testMergeSortEmptyUnaliased" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 47m 09s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest_testMergeSortEmptyUnaliased - 2018.10.20 at 06h 38m 05s.xml">
-      <configuration name="PublicMergeSorterTest.testMergeSortEmptyUnaliased" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 47m 12s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublicMergeSorterTest_testMergeSortEmptyUnaliased - 2018.10.20 at 06h 38m 08s.xml">
-      <configuration name="PublicMergeSorterTest.testMergeSortEmptyUnaliased" configurationId="JUnit" />
+    <history-entry file="PublicUnboundedQueueInterfaceTest_testReversedThreeElements - 2018.10.22 at 23h 47m 52s.xml">
+      <configuration name="PublicUnboundedQueueInterfaceTest.testReversedThreeElements" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -488,64 +541,45 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java</url>
+          <line>173</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/structures/Queue.java</url>
+          <line>67</line>
+          <properties class="structures.Queue" method="reversed">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/support/structures/UnboundedQueueInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/structures/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="1205" column="29" lean-forward="false" selection-start-line="1205" selection-start-column="18" selection-end-line="1205" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/filesystem/PublicLevelOrderIteratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1622">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="1170">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/structures/PublicUnboundedQueueInterfaceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="73" column="6" lean-forward="false" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/filesystem/LevelOrderIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/structures/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1938#1939#0" expanded="true" />
-            <element signature="e#2007#2008#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2304#2305#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,18 +591,223 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java">
+    <entry file="file://$PROJECT_DIR$/support/filesystem/FileIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2453">
-          <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filesystem/LevelOrderIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structures/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sorting/MergeSorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="81" column="16" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+        <state relative-caret-position="1170">
+          <caret line="78" column="55" lean-forward="true" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/filesystem/PublicLevelOrderIteratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="161" column="55" lean-forward="true" selection-start-line="161" selection-start-column="55" selection-end-line="161" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11205">
+          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/concurrent/FutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3420">
+          <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filesystem/LevelOrderIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="47" lean-forward="true" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/support/filesystem/FileIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/support/structures/UnboundedQueueInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="171" lean-forward="false" selection-start-line="11" selection-start-column="171" selection-end-line="11" selection-end-column="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/statements/FailOnTimeout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/statements/RunBefores.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sorting/MergeSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="78" column="55" lean-forward="false" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sorting/PublicMergeSorterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="161" column="55" lean-forward="false" selection-start-line="161" selection-start-column="55" selection-end-line="161" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/support/filesystem/FileIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/concurrent/FutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="1209" column="0" lean-forward="false" selection-start-line="1209" selection-start-column="0" selection-end-line="1209" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filesystem/LevelOrderIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/filesystem/PublicLevelOrderIteratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1378">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structures/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="68" column="43" lean-forward="true" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding>
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/structures/PublicUnboundedQueueInterfaceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
           <folding />
         </state>
       </provider>

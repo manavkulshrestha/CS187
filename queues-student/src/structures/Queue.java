@@ -20,9 +20,7 @@ public class Queue<T> implements UnboundedQueueInterface<T> {
     }
 	
 	public Queue(Queue<T> other) {
-        Queue<T> reversed = (Queue<T>) other.reversed();
-
-        for(Node<T> iter=reversed.front; iter != null; iter=iter.next)
+        for(Node<T> iter=other.front; iter != null; iter=iter.next)
             this.enqueue(iter.data);
 	}
 	
@@ -39,10 +37,10 @@ public class Queue<T> implements UnboundedQueueInterface<T> {
 	@Override
 	public void enqueue(T element) {
         if(this.rear == null) {
-            this.front = new Node<T>(element);
+            this.front = new Node<>(element);
             this.rear = this.front;
         } else {
-            this.rear.next = new Node<T>(element);
+            this.rear.next = new Node<>(element);
             this.rear = this.rear.next;
         }
         this.size++;
@@ -50,27 +48,35 @@ public class Queue<T> implements UnboundedQueueInterface<T> {
 
 	@Override
 	public T dequeue() throws NoSuchElementException {
-        T dequeued = this.front.data;
+        T dequeued = this.peek();
         this.front = this.front.next;
         this.size--;
+        if(this.isEmpty())
+            this.rear = null;
         return dequeued;
 	}
 
 	@Override
 	public T peek() throws NoSuchElementException {
+        if(this.isEmpty())
+            throw new NoSuchElementException();
         return this.front.data;
 	}
 
 	
 	@Override
 	public UnboundedQueueInterface<T> reversed() {
-        UnboundedQueueInterface<T> reversed = new Queue<>();
-
-        for(Node<T> iter=this.front; iter != null; iter=iter.next)
-            reversed.enqueue(iter.data);
-
-        return reversed;
+        return reversed(new Queue<>(this));
 	}
+
+	private UnboundedQueueInterface<T> reversed(UnboundedQueueInterface<T> q) {
+        if(q.isEmpty())
+            return q;
+        T data = q.dequeue();
+        q = reversed(q);
+        q.enqueue(data);
+        return q;
+    }
 
 	@Override
     public String toString() {
