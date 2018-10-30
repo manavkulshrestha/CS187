@@ -10,23 +10,14 @@ import java.util.NoSuchElementException;
 
 public class RecursiveList<T> implements ListInterface<T> {
     public LLNode<T> head;
+    public LLNode<T> tail;
     public int size;
 
     public RecursiveList() {
         this.head = null;
+        this.tail = this.head;
         this.size = 0;
     }
-
-//    public RecursiveList(Object... ints) {
-//        this.head = new LLNode<>((T) ints[0]);
-//        int i = 0;
-//        for(LLNode<T> iter=this.head; i<ints.length; i++, iter=iter.link) {
-//            if(i != ints.length-1) {
-//                iter.link = new LLNode<T>((T) ints[i], );
-//            } else
-//                iter.link = new LLNode<T>((T) ints[i]);
-//        }
-//    }
 
     @Override
     public int size() {
@@ -35,69 +26,80 @@ public class RecursiveList<T> implements ListInterface<T> {
 
     @Override
     public ListInterface<T> insertFirst(T elem) {
-        this.head = new LLNode<>(elem, this.head);
+        this.head = new LLNode<>(null, elem, this.head);
         this.size++;
         return this;
     }
 
     @Override
     public ListInterface<T> insertLast(T elem) {
-        return insertAt(this.size-1, elem);
+        this.tail = new LLNode<>(this.tail, elem, null);
+        this.size++;
+        return this;
     }
 
     @Override
     public ListInterface<T> insertAt(int index, T elem) {
+        if(this.isEmpty() || index < 0 || index >= this.size)
+            return null;
         if(index == 0)
-            return insertFirst(elem);
-        return (index >= this.size || index < 0) ? null : insertAt(index-1, elem, 0, this.head);
+            return this.insertFirst(elem);
+        if(index == this.size-1)
+            return this.insertLast(elem);
+        return insertAt(index, elem, 1, this.head.next);
     }
 
-    private ListInterface<T> insertAt(int prevIndex, T elem, int iterIndex, LLNode<T> currNode) {
-        if(iterIndex >= this.size-1)
+    private ListInterface<T> insertAt(int index, T elem, int iterIndex, LLNode<T> currNode) {
+        if(iterIndex > this.size)// you're taking care of size-1. look at edgecase
             return null;
-        if(prevIndex == iterIndex) {
-            currNode.link = new LLNode<>(elem, currNode.link);
-            this.size++;
+        if(index == iterIndex) {
+            currNode.prev.next = new LLNode<>(currNode.prev, elem, currNode);
+            currNode.prev = currNode.prev.next;
             return this;
         }
-        return insertAt(prevIndex, elem, iterIndex+1, currNode.link);
+        return insertAt(index, elem, iterIndex+1, currNode.next);
     }
 
     @Override
     public T removeFirst() {
-        return removeAt(0);
+        T ret = this.head.data;
+        this.head = this.head.next;
+        this.size--;
+        return ret;
     }
 
     @Override
     public T removeLast() {
-        return removeAt(this.size-1);
+        T ret = this.tail.data;
+        this.tail = this.tail.prev;
+        this.size--;
+        return ret;
     }
 
     @Override
     public T removeAt(int i) {
-        if(i == 0) {
-            T ret = this.head.data;
-            this.head = this.head.link;
-            return ret;
-        }
-        return (i >= this.size || i < 0) ? null : removeAt(i-1, 0, this.head);
+        if(this.isEmpty() || i < 0 || i >= this.size)
+            return null;
+        if(i == 0)
+            return removeFirst();
+        else if(i == this.size-1)
+            return removeLast();
+        return removeAt(i, 1, this.head.next);
     }
 
-    private T removeAt(int iPrev, int iterIndex, LLNode<T> currNode) {
-        if(iterIndex >= this.size-1)
+    private T removeAt(int i, int iterIndex, LLNode<T> currNode) {
+        if(iterIndex > this.size)
             return null;
-        if(iPrev == iterIndex) {
-            T ret = currNode.link.data;
-            if(iPrev == this.size-2)
-                currNode.link =  null;
-            else
-                currNode.link = currNode.link.link;
+        if(i == iterIndex) {
+            T ret = currNode.data;
+            currNode.prev.next = currNode.next;
+            currNode.next.prev = currNode.prev;
             this.size--;
             return ret;
         }
-
-        return removeAt(iPrev, iterIndex+1, currNode.link);
+        return removeAt(i, iterIndex+1, currNode.next);
     }
+    //HERE
 
     @Override
     public T getFirst() {
@@ -106,7 +108,7 @@ public class RecursiveList<T> implements ListInterface<T> {
 
     @Override
     public T getLast() {
-        return get(this.size-1);
+        return (this.isEmpty()) ? null : this.tail.data;
     }
 
     @Override
@@ -119,7 +121,7 @@ public class RecursiveList<T> implements ListInterface<T> {
             return null;
         if(i == iterIndex)
             return currNode.data;
-        return get(i, iterIndex+1, currNode.link);
+        return get(i, iterIndex+1, currNode.next);
     }
 
     @Override
@@ -137,7 +139,7 @@ public class RecursiveList<T> implements ListInterface<T> {
             return -1;
         if(currNode.data == elem)
             return iterIndex;
-        return indexOf(elem, iterIndex+1, currNode.link);
+        return indexOf(elem, iterIndex+1, currNode.next);
     }
 
     @Override
@@ -160,28 +162,26 @@ public class RecursiveList<T> implements ListInterface<T> {
         for(Object o: objects) {
             if(!o.equals(iter.data))
                 return false;
-            iter=iter.link;
+            iter=iter.next;
         }
         return true;
     }
 }
 
 class LLNode<T> {
+    public LLNode<T> prev;
     public T data;
-    public LLNode<T> link;
+    public LLNode<T> next;
 
-    public LLNode(T data, LLNode<T> link) {
+    public LLNode(LLNode<T> prev, T data, LLNode<T> next) {
+        this.prev = prev;
         this.data = data;
-        this.link = link;
-    }
-
-    public LLNode(T data) {
-        this(data, null);
+        this.next = next;
     }
 
     @Override
     public String toString() {
-        return this.data+","+((this.link != null) ? this.link : "");
+        return this.data+","+((this.next != null) ? this.next : "");
     }
 }
 
@@ -201,7 +201,7 @@ class RecursiveListIterator<T> implements Iterator<T> {
     public T next() {
         if(this.hasNext()) {
             T ret = this.iter.data;
-            this.iter = iter.link;
+            this.iter = iter.next;
             return ret;
         }
         throw new NoSuchElementException();
