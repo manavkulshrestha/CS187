@@ -9,217 +9,242 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class RecursiveList<T> implements ListInterface<T> {
-    public LLNode<T> head;
-    public LLNode<T> tail;
+    public Node<T> head;
+    public Node<T> tail;
     public int size;
 
-    public RecursiveList() {
-        this.head = null;
-        this.tail = this.head;
-        this.size = 0;
-    }
-
-    @Override
+    /**
+     * Returns the number of elements in this {@link ListInterface}. This method
+     * runs in O(1) time.
+     */
     public int size() {
         return this.size;
     }
 
-    @Override
+    /**
+     * Adds an element to the front of this {@link ListInterface}. This method
+     * runs in O(1) time. For convenience, this method returns the
+     * {@link ListInterface} that was modified.
+     *
+     * @param elem
+     *            the element to add
+     * @throws NullPointerException
+     *             if {@code elem} is {@code null}
+     * @return The modified {@link ListInterface}
+     */
     public ListInterface<T> insertFirst(T elem) throws NullPointerException {
         if(elem == null)
             throw new NullPointerException();
         if(this.size++ == 0) {
-            this.head = new LLNode<>(null, elem, null);
+            this.head = new Node<>(null, elem, null);
             this.tail = this.head;
         } else {
-            this.head.prev = new LLNode<>(null, elem, this.head);
-            this.head.prev.next = this.head;
+            this.head.prev = new Node<>(null, elem, this.head);
             this.head = this.head.prev;
         }
         return this;
     }
 
-    @Override
+    /**
+     * Adds an element to the end of this {@link ListInterface}. This method
+     * runs in O(size) time. For convenience, this method returns the
+     * {@link ListInterface} that was modified.
+     *
+     * @param elem
+     *            the element to add
+     * @throws NullPointerException
+     *             if {@code elem} is {@code null}
+     * @return the modified {@link ListInterface}
+     */
     public ListInterface<T> insertLast(T elem) throws NullPointerException {
         if(elem == null)
             throw new NullPointerException();
         if(this.size++ == 0) {
-            this.tail = new LLNode<>(null, elem, null);
+            this.tail = new Node<>(null, elem, null);
             this.head = this.tail;
         } else {
-            this.tail.next = new LLNode<>(this.tail, elem, null);
-            this.tail.next.prev = this.tail;
+            this.tail.next = new Node<>(this.tail, elem, null);
             this.tail = this.tail.next;
         }
         return this;
     }
 
-    @Override
+    /**
+     * Adds an element at the specified index such that a subsequent call to
+     * {@link ListInterface#get(int)} at {@code index} will return the inserted
+     * value. This method runs in O(index) time. For convenience, this method
+     * returns the {@link ListInterface} that was modified.
+     *
+     * @param index
+     *            the index to add the element at
+     * @param elem
+     *            the element to add
+     * @throws NullPointerException
+     *             if {@code elem} is {@code null}
+     * @throws IndexOutOfBoundsException
+     *             if {@code index} is less than 0 or greater than
+     *             {@link ListInterface#size()}
+     * @return The modified {@link ListInterface}
+     */
     public ListInterface<T> insertAt(int index, T elem) throws NullPointerException, IndexOutOfBoundsException {
         if(elem == null)
             throw new NullPointerException();
-        if(this.isEmpty() || index < 0 || index >= this.size)
+        if(index < 0 || index > this.size)
             throw new IndexOutOfBoundsException();
         if(index == 0)
-            return this.insertFirst(elem);
-        if(index == this.size-1)
-            return this.insertLast(elem);
+            return insertFirst(elem);
+        if(index == this.size)
+            return insertLast(elem);
         return insertAt(index, elem, 1, this.head.next);
     }
 
-    private ListInterface<T> insertAt(int index, T elem, int iterIndex, LLNode<T> currNode) throws IllegalStateException {
-        if(this.isEmpty())
-            throw new IllegalStateException();
-        if(iterIndex > this.size)// you're taking care of size-1. look at edgecase
-            return null;
+    private ListInterface<T> insertAt(int index, T elem, int iterIndex, Node<T> iterNode) {
         if(index == iterIndex) {
-            currNode.prev.next = new LLNode<>(currNode.prev, elem, currNode);
-            currNode.prev = currNode.prev.next;
-            return this;
+            iterNode.prev.next = new Node<>(iterNode.prev, elem, iterNode);
+            iterNode.prev = iterNode.prev.next;
         }
-        return insertAt(index, elem, iterIndex+1, currNode.next);
+        return insertAt(index, elem, iterIndex+1, iterNode.next);
     }
 
-    @Override
-    public T removeFirst() throws IllegalStateException {
-//        if(this.isEmpty())
-//            throw new IllegalStateException();
-//        T ret = this.head.data;
-//        if(this.size-- == 0) {
-//            this.head = null;
-//            this.tail = null;
-//        } else {
-//            this.head = this.head.next;
-//            this.head.prev = null;
-//        }
-//        return ret;
-        if(this.isEmpty())
+    /**
+     * Removes the first element from this {@link ListInterface} and returns it.
+     * This method runs in O(1) time.
+     *
+     * @throws IllegalStateException
+     *             if the {@link ListInterface} is empty.
+     * @return the removed element
+     */
+    public T removeFirst() throws IllegalStateException{
+        if(isEmpty())
             throw new IllegalStateException();
         T ret = this.head.data;
-        this.head = this.head.next;
-        this.size--;
+        if(this.size-- == 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.head = this.head.next;
+            this.head.prev = null;
+        }
         return ret;
-
     }
 
-    @Override
+    /**
+     * <p>
+     * Removes the last element from this {@link ListInterface} and returns it.
+     * This method runs in O(size) time.
+     *</p>
+     *
+     * @throws IllegalStateException
+     *             if the {@link ListInterface} is empty.
+     * @return the removed element
+     */
     public T removeLast() throws IllegalStateException {
-//        if(this.isEmpty())
-//            throw new IllegalStateException();
-//        T ret = this.tail.data;
-//        if(this.size-- == 1) {
-//            this.head = null;
-//            this.tail = null;
-//        } else {
-//            this.tail = this.tail.prev;
-//            this.tail.next = null;
-//        }
-//        return ret;
-        if(this.isEmpty())
+        if(isEmpty())
             throw new IllegalStateException();
         T ret = this.tail.data;
-        this.tail = this.tail.prev;
-        this.size--;
+        if(this.size-- == 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.tail = this.tail.prev;
+            this.tail.next = null;
+        }
         return ret;
     }
 
-    @Override
-    public T removeAt(int i) throws IndexOutOfBoundsException {
-        if(this.isEmpty() || i < 0 || i >= this.size)
-            throw new IndexOutOfBoundsException();
-        if(i == 0)
-            return removeFirst();
-        else if(i == this.size-1)
-            return removeLast();
-        return removeAt(i, 1, this.head.next);
-    }
+    /**
+     * Removes the ith element in this {@link ListInterface} and returns it.
+     * This method runs in O(i) time.
+     *
+     * @param i
+     *            the index of the element to remove
+     * @throws IndexOutOfBoundsException
+     *             if {@code i} is less than 0 or {@code i} is greater than or
+     *             equal to {@link ListInterface#size()}
+     * @return The removed element
+     */
+    public T removeAt(int i);
 
-    private T removeAt(int i, int iterIndex, LLNode<T> currNode) {
-        if(iterIndex > this.size)
-            return null;
-        if(i == iterIndex) {
-            T ret = currNode.data;
-            currNode.prev.next = currNode.next;
-            currNode.next.prev = currNode.prev;
-            this.size--;
-            return ret;
-        }
-        return removeAt(i, iterIndex+1, currNode.next);
-    }
+    /**
+     * Returns the first element in this {@link ListInterface}. This method runs
+     * in O(1) time.
+     *
+     * @throws IllegalStateException
+     *             if the {@link ListInterface} is empty.
+     * @return the first element in this {@link ListInterface}.
+     */
+    public T getFirst();
 
-    @Override
-    public T getFirst() throws IllegalStateException {
-        if(this.isEmpty())
-            throw new IllegalStateException();
-        return this.head.data;
-    }
+    /**
+     * Returns the last element in this {@link ListInterface}. This method runs
+     * in O(size) time.
+     *
+     * @throws IllegalStateException
+     *             if the {@link ListInterface} is empty.
+     * @return the last element in this {@link ListInterface}.
+     */
+    public T getLast();
 
-    @Override
-    public T getLast() throws IllegalStateException {
-        if(this.isEmpty())
-            throw new IllegalStateException();
-        return this.tail.data;
-    }
+    /**
+     * Returns the ith element in this {@link ListInterface}. This method runs
+     * in O(i) time.
+     *
+     * @param i
+     *            the index to lookup
+     * @throws IndexOutOfBoundsException
+     *             if {@code i} is less than 0 or {@code i} is greater than or
+     *             equal to {@link ListInterface#size()}
+     * @return the ith element in this {@link ListInterface}.
+     */
+    public T get(int i);
 
-    @Override
-    public T get(int i) throws IndexOutOfBoundsException {
-        if(this.isEmpty() || i < 0 || i >= this.size)
-            throw new IndexOutOfBoundsException();
-        return get(i, 0, this.head);
-    }
+    /**
+     * Removes {@code elem} from this {@link ListInterface} if it exists. If
+     * multiple instances of {@code elem} exist in this {@link ListInterface}
+     * the one associated with the smallest index is removed. This method runs
+     * in O(size) time.
+     *
+     * @param elem
+     *            the element to remove
+     * @throws NullPointerException
+     *             if {@code elem} is {@code null}
+     * @return {@code true} if this {@link ListInterface} was altered and
+     *         {@code false} otherwise.
+     */
+    public boolean remove(T elem);
 
-    private T get(int i, int iterIndex, LLNode<T> currNode) {
-        if(iterIndex >= this.size)
-            return null;
-        if(i == iterIndex)
-            return currNode.data;
-        return get(i, iterIndex+1, currNode.next);
-    }
+    /**
+     * Returns the smallest index which contains {@code elem}. If there is no
+     * instance of {@code elem} in this {@link ListInterface} then -1 is
+     * returned. This method runs in O(size) time.
+     *
+     * @param elem
+     *            the element to search for
+     * @throws NullPointerException
+     *             if {@code elem} is {@code null}
+     * @return the smallest index which contains {@code elem} or -1 if
+     *         {@code elem} is not in this {@link ListInterface}
+     */
+    public int indexOf(T elem);
 
-    @Override
-    public boolean remove(T elem) throws NullPointerException {
-        if(elem == null)
-            throw new NullPointerException();
-        return (removeAt(indexOf(elem)) != null);
-    }
-
-    @Override
-    public int indexOf(T elem) throws NullPointerException {
-        if(elem == null)
-            throw new NullPointerException();
-        return indexOf(elem, 0, this.head);
-    }
-
-    private int indexOf(T elem, int iterIndex, LLNode<T> currNode) {
-        if(iterIndex >= this.size)
-            return -1;
-        if(currNode.data == elem)
-            return iterIndex;
-        return indexOf(elem, iterIndex+1, currNode.next);
-    }
-
-    @Override
+    /**
+     * Returns {@code true} if this {@link ListInterface} contains no elements
+     * and {@code false} otherwise. This method runs in O(1) time.
+     *
+     * @return {@code true} if this {@link ListInterface} contains no elements
+     *         and {@code false} otherwise.
+     */
     public boolean isEmpty() {
-        return (this.size <= 0);
-    }
-
-    @Override
-    public Iterator<T> iterator() {
-        return new RecursiveListIterator<>(this.head);
-    }
-
-    @Override
-    public String toString() {
-        return (this.isEmpty()) ? "" : this.head.toString();
+        return this.size == 0;
     }
 }
 
-class LLNode<T> {
-    public LLNode<T> prev;
+class Node<T> {
+    public Node<T> prev;
     public T data;
-    public LLNode<T> next;
+    public Node<T> next;
 
-    public LLNode(LLNode<T> prev, T data, LLNode<T> next) {
+    public Node(Node<T> prev, T data, Node<T> next) {
         this.prev = prev;
         this.data = data;
         this.next = next;
@@ -227,14 +252,14 @@ class LLNode<T> {
 
     @Override
     public String toString() {
-        return this.data+((this.next != null) ? ","+this.next : "");
+        return this.data.toString();
     }
 }
 
 class RecursiveListIterator<T> implements Iterator<T> {
-    LLNode<T> iter;
+    Node<T> iter;
 
-    public RecursiveListIterator(LLNode<T> head) {
+    public RecursiveListIterator(Node<T> head) {
         this.iter = head;
     }
 

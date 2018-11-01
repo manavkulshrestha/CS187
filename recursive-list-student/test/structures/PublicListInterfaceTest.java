@@ -91,7 +91,7 @@ public class PublicListInterfaceTest {
 	}
 
 	public boolean valsEqual(RecursiveList<Integer> l, Integer... obs) {
-		LLNode<Integer> iter = l.head;
+		Node<Integer> iter = l.head;
 		for(Object o: obs) {
 			if(!iter.data.equals(o))
 				return false;
