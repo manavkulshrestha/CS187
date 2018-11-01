@@ -102,6 +102,8 @@ public class RecursiveList<T> implements ListInterface<T> {
         if(index == iterIndex) {
             iterNode.prev.next = new Node<>(iterNode.prev, elem, iterNode);
             iterNode.prev = iterNode.prev.next;
+            this.size++;
+            return this;
         }
         return insertAt(index, elem, iterIndex+1, iterNode.next);
     }
@@ -163,7 +165,24 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             equal to {@link ListInterface#size()}
      * @return The removed element
      */
-    public T removeAt(int i);
+    public T removeAt(int i) throws IndexOutOfBoundsException {
+        if(i < 0 || i >= this.size)
+            throw new IndexOutOfBoundsException();
+        if(i == 0)
+            return removeFirst();
+        if(i == this.size-1)
+            return removeLast();
+        return removeAt(i, 1, this.head.next);
+    }
+
+    private T removeAt(int i, int iterIndex, Node<T> iterNode) {
+        if(i == iterIndex) {
+            iterNode.prev.next = iterNode.next;
+            this.size--;
+            return iterNode.data;
+        }
+        return removeAt(i, iterIndex+1, iterNode.next);
+    }
 
     /**
      * Returns the first element in this {@link ListInterface}. This method runs
@@ -173,7 +192,11 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if the {@link ListInterface} is empty.
      * @return the first element in this {@link ListInterface}.
      */
-    public T getFirst();
+    public T getFirst() throws IllegalStateException {
+        if(isEmpty())
+            throw new IllegalStateException();
+        return this.head.data;
+    }
 
     /**
      * Returns the last element in this {@link ListInterface}. This method runs
@@ -183,7 +206,11 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if the {@link ListInterface} is empty.
      * @return the last element in this {@link ListInterface}.
      */
-    public T getLast();
+    public T getLast() throws IllegalStateException {
+        if(isEmpty())
+            throw new IllegalStateException();
+        return this.tail.data;
+    }
 
     /**
      * Returns the ith element in this {@link ListInterface}. This method runs
@@ -196,7 +223,21 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             equal to {@link ListInterface#size()}
      * @return the ith element in this {@link ListInterface}.
      */
-    public T get(int i);
+    public T get(int i) throws IndexOutOfBoundsException {
+        if(i < 0 || i >= this.size)
+            throw new IndexOutOfBoundsException();
+        if(i == 0)
+            return getFirst();
+        if(i == this.size-1)
+            return getLast();
+        return get(i, 1, this.head.next);
+    }
+
+    private T get(int i, int iterIndex, Node<T> iterNode) {
+        if(i == iterIndex)
+            return iterNode.data;
+        return get(i, iterIndex+1, iterNode.next);
+    }
 
     /**
      * Removes {@code elem} from this {@link ListInterface} if it exists. If
