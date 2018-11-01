@@ -25,23 +25,41 @@ public class RecursiveList<T> implements ListInterface<T> {
     }
 
     @Override
-    public ListInterface<T> insertFirst(T elem) {
-        this.head = new LLNode<>(null, elem, this.head);
-        this.size++;
+    public ListInterface<T> insertFirst(T elem) throws NullPointerException {
+        if(elem == null)
+            throw new NullPointerException();
+        if(this.size++ == 0) {
+            this.head = new LLNode<>(null, elem, null);
+            this.tail = this.head;
+        } else {
+            this.head.prev = new LLNode<>(null, elem, this.head);
+            this.head.prev.next = this.head;
+            this.head = this.head.prev;
+        }
         return this;
     }
 
     @Override
-    public ListInterface<T> insertLast(T elem) {
-        this.tail = new LLNode<>(this.tail, elem, null);
-        this.size++;
+    public ListInterface<T> insertLast(T elem) throws NullPointerException {
+        if(elem == null)
+            throw new NullPointerException();
+        if(this.size++ == 0) {
+            this.tail = new LLNode<>(null, elem, null);
+            this.head = this.tail;
+        } else {
+            this.tail.next = new LLNode<>(this.tail, elem, null);
+            this.tail.next.prev = this.tail;
+            this.tail = this.tail.next;
+        }
         return this;
     }
 
     @Override
-    public ListInterface<T> insertAt(int index, T elem) {
+    public ListInterface<T> insertAt(int index, T elem) throws NullPointerException, IndexOutOfBoundsException {
+        if(elem == null)
+            throw new NullPointerException();
         if(this.isEmpty() || index < 0 || index >= this.size)
-            return null;
+            throw new IndexOutOfBoundsException();
         if(index == 0)
             return this.insertFirst(elem);
         if(index == this.size-1)
@@ -49,7 +67,9 @@ public class RecursiveList<T> implements ListInterface<T> {
         return insertAt(index, elem, 1, this.head.next);
     }
 
-    private ListInterface<T> insertAt(int index, T elem, int iterIndex, LLNode<T> currNode) {
+    private ListInterface<T> insertAt(int index, T elem, int iterIndex, LLNode<T> currNode) throws IllegalStateException {
+        if(this.isEmpty())
+            throw new IllegalStateException();
         if(iterIndex > this.size)// you're taking care of size-1. look at edgecase
             return null;
         if(index == iterIndex) {
@@ -61,15 +81,42 @@ public class RecursiveList<T> implements ListInterface<T> {
     }
 
     @Override
-    public T removeFirst() {
+    public T removeFirst() throws IllegalStateException {
+//        if(this.isEmpty())
+//            throw new IllegalStateException();
+//        T ret = this.head.data;
+//        if(this.size-- == 0) {
+//            this.head = null;
+//            this.tail = null;
+//        } else {
+//            this.head = this.head.next;
+//            this.head.prev = null;
+//        }
+//        return ret;
+        if(this.isEmpty())
+            throw new IllegalStateException();
         T ret = this.head.data;
         this.head = this.head.next;
         this.size--;
         return ret;
+
     }
 
     @Override
-    public T removeLast() {
+    public T removeLast() throws IllegalStateException {
+//        if(this.isEmpty())
+//            throw new IllegalStateException();
+//        T ret = this.tail.data;
+//        if(this.size-- == 1) {
+//            this.head = null;
+//            this.tail = null;
+//        } else {
+//            this.tail = this.tail.prev;
+//            this.tail.next = null;
+//        }
+//        return ret;
+        if(this.isEmpty())
+            throw new IllegalStateException();
         T ret = this.tail.data;
         this.tail = this.tail.prev;
         this.size--;
@@ -77,9 +124,9 @@ public class RecursiveList<T> implements ListInterface<T> {
     }
 
     @Override
-    public T removeAt(int i) {
+    public T removeAt(int i) throws IndexOutOfBoundsException {
         if(this.isEmpty() || i < 0 || i >= this.size)
-            return null;
+            throw new IndexOutOfBoundsException();
         if(i == 0)
             return removeFirst();
         else if(i == this.size-1)
@@ -99,21 +146,26 @@ public class RecursiveList<T> implements ListInterface<T> {
         }
         return removeAt(i, iterIndex+1, currNode.next);
     }
-    //HERE
 
     @Override
-    public T getFirst() {
-        return (this.isEmpty()) ? null : this.head.data;
+    public T getFirst() throws IllegalStateException {
+        if(this.isEmpty())
+            throw new IllegalStateException();
+        return this.head.data;
     }
 
     @Override
-    public T getLast() {
-        return (this.isEmpty()) ? null : this.tail.data;
+    public T getLast() throws IllegalStateException {
+        if(this.isEmpty())
+            throw new IllegalStateException();
+        return this.tail.data;
     }
 
     @Override
-    public T get(int i) {
-        return ((i >= this.size || i < 0) ? null : get(i, 0, this.head));
+    public T get(int i) throws IndexOutOfBoundsException {
+        if(this.isEmpty() || i < 0 || i >= this.size)
+            throw new IndexOutOfBoundsException();
+        return get(i, 0, this.head);
     }
 
     private T get(int i, int iterIndex, LLNode<T> currNode) {
@@ -125,13 +177,17 @@ public class RecursiveList<T> implements ListInterface<T> {
     }
 
     @Override
-    public boolean remove(T elem) {
+    public boolean remove(T elem) throws NullPointerException {
+        if(elem == null)
+            throw new NullPointerException();
         return (removeAt(indexOf(elem)) != null);
     }
 
     @Override
-    public int indexOf(T elem) {
-        return indexOf(elem, 1, this.head);
+    public int indexOf(T elem) throws NullPointerException {
+        if(elem == null)
+            throw new NullPointerException();
+        return indexOf(elem, 0, this.head);
     }
 
     private int indexOf(T elem, int iterIndex, LLNode<T> currNode) {
@@ -144,7 +200,7 @@ public class RecursiveList<T> implements ListInterface<T> {
 
     @Override
     public boolean isEmpty() {
-        return (this.size == 0);
+        return (this.size <= 0);
     }
 
     @Override
@@ -155,16 +211,6 @@ public class RecursiveList<T> implements ListInterface<T> {
     @Override
     public String toString() {
         return (this.isEmpty()) ? "" : this.head.toString();
-    }
-
-    public boolean valsEqual(Object[] objects) {
-        LLNode<T> iter = this.head;
-        for(Object o: objects) {
-            if(!o.equals(iter.data))
-                return false;
-            iter=iter.next;
-        }
-        return true;
     }
 }
 
@@ -181,7 +227,7 @@ class LLNode<T> {
 
     @Override
     public String toString() {
-        return this.data+","+((this.next != null) ? this.next : "");
+        return this.data+((this.next != null) ? ","+this.next : "");
     }
 }
 
