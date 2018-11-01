@@ -13,10 +13,17 @@ public class RecursiveList<T> implements ListInterface<T> {
     public Node<T> tail;
     public int size;
 
+    public RecursiveList() {
+        this.head = null;
+        this.tail = null;
+        this.size == 0;
+    }
+
     /**
      * Returns the number of elements in this {@link ListInterface}. This method
      * runs in O(1) time.
      */
+    @Override
     public int size() {
         return this.size;
     }
@@ -32,6 +39,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if {@code elem} is {@code null}
      * @return The modified {@link ListInterface}
      */
+    @Override
     public ListInterface<T> insertFirst(T elem) throws NullPointerException {
         if(elem == null)
             throw new NullPointerException();
@@ -56,6 +64,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if {@code elem} is {@code null}
      * @return the modified {@link ListInterface}
      */
+    @Override
     public ListInterface<T> insertLast(T elem) throws NullPointerException {
         if(elem == null)
             throw new NullPointerException();
@@ -86,6 +95,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             {@link ListInterface#size()}
      * @return The modified {@link ListInterface}
      */
+    @Override
     public ListInterface<T> insertAt(int index, T elem) throws NullPointerException, IndexOutOfBoundsException {
         if(elem == null)
             throw new NullPointerException();
@@ -116,6 +126,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if the {@link ListInterface} is empty.
      * @return the removed element
      */
+    @Override
     public T removeFirst() throws IllegalStateException{
         if(isEmpty())
             throw new IllegalStateException();
@@ -140,6 +151,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if the {@link ListInterface} is empty.
      * @return the removed element
      */
+    @Override
     public T removeLast() throws IllegalStateException {
         if(isEmpty())
             throw new IllegalStateException();
@@ -165,6 +177,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             equal to {@link ListInterface#size()}
      * @return The removed element
      */
+    @Override
     public T removeAt(int i) throws IndexOutOfBoundsException {
         if(i < 0 || i >= this.size)
             throw new IndexOutOfBoundsException();
@@ -192,6 +205,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if the {@link ListInterface} is empty.
      * @return the first element in this {@link ListInterface}.
      */
+    @Override
     public T getFirst() throws IllegalStateException {
         if(isEmpty())
             throw new IllegalStateException();
@@ -206,6 +220,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             if the {@link ListInterface} is empty.
      * @return the last element in this {@link ListInterface}.
      */
+    @Override
     public T getLast() throws IllegalStateException {
         if(isEmpty())
             throw new IllegalStateException();
@@ -223,6 +238,7 @@ public class RecursiveList<T> implements ListInterface<T> {
      *             equal to {@link ListInterface#size()}
      * @return the ith element in this {@link ListInterface}.
      */
+    @Override
     public T get(int i) throws IndexOutOfBoundsException {
         if(i < 0 || i >= this.size)
             throw new IndexOutOfBoundsException();
@@ -252,7 +268,15 @@ public class RecursiveList<T> implements ListInterface<T> {
      * @return {@code true} if this {@link ListInterface} was altered and
      *         {@code false} otherwise.
      */
-    public boolean remove(T elem);
+    @Override
+    public boolean remove(T elem) throws NullPointerException {
+        if(elem == null)
+            throw new NullPointerException();
+        int index = indexOf(elem);
+        if(index == -1)
+            return false;
+        return (removeAt(index) != null);//should never be null
+    }
 
     /**
      * Returns the smallest index which contains {@code elem}. If there is no
@@ -266,7 +290,20 @@ public class RecursiveList<T> implements ListInterface<T> {
      * @return the smallest index which contains {@code elem} or -1 if
      *         {@code elem} is not in this {@link ListInterface}
      */
-    public int indexOf(T elem);
+    @Override
+    public int indexOf(T elem) throws NullPointerException {
+        if(elem == null)
+            throw new NullPointerException();
+        return indexOf(elem, this.head, 0);
+    }
+
+    private int indexOf(T elem, Node<T> iterNode, int iterIndex) {
+        if(iterIndex >= this.size)
+            return -1;
+        if(elem == iterNode.data)
+            return iterIndex;
+        return indexOf(elem, iterNode.next, iterIndex+1);
+    }
 
     /**
      * Returns {@code true} if this {@link ListInterface} contains no elements
@@ -275,8 +312,23 @@ public class RecursiveList<T> implements ListInterface<T> {
      * @return {@code true} if this {@link ListInterface} contains no elements
      *         and {@code false} otherwise.
      */
+    @Override
     public boolean isEmpty() {
-        return this.size == 0;
+        return (this.size == 0);
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new RecursiveListIterator<>(this.head);
+    }
+
+    @Override
+    public String toString() {
+        return (isEmpty()) ? "" : recStringBuilder(this.head);
+    }
+
+    private String recStringBuilder(Node<T> node) {
+        return node.data+((node.next != null) ? ","+recStringBuilder(node.next) : "");
     }
 }
 
