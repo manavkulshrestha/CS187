@@ -16,7 +16,7 @@ public class RecursiveList<T> implements ListInterface<T> {
     public RecursiveList() {
         this.head = null;
         this.tail = null;
-        this.size == 0;
+        this.size = 0;
     }
 
     /**
