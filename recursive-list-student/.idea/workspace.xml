@@ -12,13 +12,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PublicListInterfaceTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PublicListInterfaceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/structures/PublicListInterfaceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="328">
+              <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#213#214#0" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecursiveList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecursiveList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/structures/RecursiveList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="270">
               <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11453#0" expanded="true" />
@@ -86,8 +88,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/structures/PublicListInterfaceTest.java" />
         <option value="$PROJECT_DIR$/src/structures/RecursiveList.java" />
+        <option value="$PROJECT_DIR$/test/structures/PublicListInterfaceTest.java" />
       </list>
     </option>
   </component>
@@ -179,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PublicListInterfaceTest.testInsertionAndRemoval">
+  <component name="RunManager" selected="JUnit.PublicListInterfaceTest.testInsertFirstIsEmptySizeAndGetFirst1">
     <configuration name="PublicListInterfaceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -395,11 +397,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testInsertionAndRemoval" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testIndexOf" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testInsertion" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testInsertFirstIsEmptySizeAndGetFirst1" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testInsertFirstIsEmptySizeAndGetFirst1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testInsertionAndRemoval" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testIndexOf" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PublicListInterfaceTest.testInsertion" />
       </list>
     </recent_temporary>
   </component>
@@ -420,8 +422,8 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PublicListInterfaceTest_testInsertionAndRemoval - 2018.10.31 at 20h 33m 24s.xml">
-      <configuration name="PublicListInterfaceTest.testInsertionAndRemoval" configurationId="JUnit" />
+    <history-entry file="PublicListInterfaceTest_testInsertFirstIsEmptySizeAndGetFirst1 - 2018.11.01 at 01h 19m 37s.xml">
+      <configuration name="PublicListInterfaceTest.testInsertFirstIsEmptySizeAndGetFirst1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PublicListInterfaceTest_testInsertionAndRemoval - 2018.10.31 at 20h 33m 27s.xml">
       <configuration name="PublicListInterfaceTest.testInsertionAndRemoval" configurationId="JUnit" />
@@ -473,7 +475,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -488,20 +490,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/structures/PublicListInterfaceTest.java</url>
-          <line>86</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/structures/PublicListInterfaceTest.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
@@ -513,6 +501,8 @@
           <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,6 +538,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -723,16 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/structures/PublicListInterfaceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/support/structures/ListInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -743,7 +725,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/structures/RecursiveList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="270">
           <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
             <element signature="e#0#11453#0" expanded="true" />
@@ -762,6 +744,18 @@
             <element signature="e#11141#11142#0" expanded="true" />
             <element signature="e#11187#11188#0" expanded="true" />
             <element signature="e#11229#11230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/structures/PublicListInterfaceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
