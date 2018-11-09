@@ -25,11 +25,13 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 		}
 	}
 
-	public boolean contains(T t) {
+	public boolean contains(T t) throws NullPointerException {
+	    if(t == null)
+	        throw new NullPointerException();
 		return (get(t) != null);
 	}
 
-	public boolean remove(T t) {
+	public boolean remove(T t) throws NullPointerException {
 		if (t == null) {
 			throw new NullPointerException();
 		}
@@ -94,7 +96,9 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 		}
 	}
 
-	public T get(T t) {
+	public T get(T t) throws NullPointerException {
+	    if(t == null)
+            throw new NullPointerException();
 		for(BSTNode<T> node = this.root; node != null;) {
             T data = node.getData();
 			if(data.compareTo(t) == 0)
@@ -108,7 +112,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 
-	public void add(T t) {
+	public void add(T t) throws NullPointerException{
 		if (t == null) {
 			throw new NullPointerException();
 		}
@@ -218,7 +222,9 @@ public class BinarySearchTree<T extends Comparable<T>> implements
     }
 
 	@Override
-	public boolean equals(BSTInterface<T> other) {
+	public boolean equals(BSTInterface<T> other) throws NullPointerException {
+	    if(other == null)
+	        throw new NullPointerException();
 		return equals(this.root, other.getRoot());
 	}
 
@@ -235,7 +241,9 @@ public class BinarySearchTree<T extends Comparable<T>> implements
     }
 
 	@Override
-	public boolean sameValues(BSTInterface<T> other) {
+	public boolean sameValues(BSTInterface<T> other) throws NullPointerException {
+	    if(other == null)
+	        throw new NullPointerException();
 		Queue<T> q1 = new LinkedList<>();
 		inorderTraverse(q1, this.root);
 

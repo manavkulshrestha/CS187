@@ -1,10 +1,5 @@
 package structures;
 
-import com.sun.org.apache.regexp.internal.RE;
-import javafx.geometry.Pos;
-
-import java.awt.*;
-
 public class RedBlackTree<T extends Comparable<T>> extends
 			BinarySearchTree<T> {
 	
