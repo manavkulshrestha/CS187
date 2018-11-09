@@ -1,5 +1,10 @@
 package structures;
 
+import com.sun.org.apache.regexp.internal.RE;
+import javafx.geometry.Pos;
+
+import java.awt.*;
+
 public class RedBlackTree<T extends Comparable<T>> extends
 			BinarySearchTree<T> {
 	
@@ -14,7 +19,7 @@ public class RedBlackTree<T extends Comparable<T>> extends
 	  }
 	
 	  private boolean isBlack(BSTNode<T> node) {
-		  if (node == null) return false;
+		  if (node == null) return true;
 		  return node.getColor() == BSTNode.BLACK;
 	  }
 	  
@@ -76,10 +81,78 @@ public class RedBlackTree<T extends Comparable<T>> extends
 	  //       parent node is the left child of grandparent node, do right rotation.
  	  // HINT: It's helpful if you build getGrandparent and getUncle method first
 	  @Override
-	  public void add(T t) {
-
+	  public void add(T t) throws NullPointerException {
 			// TODO
+          if(t == null)
+              throw new NullPointerException();
+
+          BSTNode<T> toAdd = new BSTNode<>(t, null, null, BSTNode.RED);
+
+          this.root = addToSubtree(this.root, toAdd);
+
+          addHelper(toAdd);
 	  }
+
+	  private void addHelper(BSTNode<T> node) {
+	      if(node == this.root) {
+	          node.setColor(BSTNode.BLACK);
+	          return;
+          }
+
+          if(node.getParent() == null || node.getParent().getColor() == BSTNode.BLACK)
+	          return;
+
+	      BSTNode<T> uncle = getUncle(node);
+          BSTNode<T> grandparent = getGrandparent(node);
+
+	      if(uncle == null || uncle.getColor() == BSTNode.BLACK) {
+	          BSTNode<T> parent = node.getParent();
+
+              if(grandparent.getLeft() == parent && parent.getRight() == node) {//left right - inside
+                  rotateLeft(parent);
+                  addHelper(node.getLeft());
+              } else if(grandparent.getRight() == parent && parent.getLeft() == node) {//right left - inside
+                  rotateRight(parent);
+                  addHelper(node.getRight());
+              } else if(grandparent.getLeft() == parent && parent.getLeft() == node) {// left left - outside
+                  parent.setColor(BSTNode.BLACK);
+                  grandparent.setColor(BSTNode.RED);
+                  rotateRight(grandparent);
+              } else if(grandparent.getRight() == parent && parent.getRight() == node) {// right right - outside
+                  parent.setColor(BSTNode.BLACK);
+                  grandparent.setColor(BSTNode.RED);
+                  rotateLeft(grandparent);
+              }
+              return;
+          }
+
+          if(uncle.getColor() == BSTNode.RED) {
+              node.getParent().setColor(BSTNode.BLACK);
+              uncle.setColor(BSTNode.BLACK);
+              grandparent.setColor(BSTNode.RED);
+              addHelper(grandparent);
+              return;
+          }
+      }
+
+	  private BSTNode<T> getUncle(BSTNode<T> node) {
+	      BSTNode<T> grandparent = getGrandparent(node);
+	      if(grandparent == null)
+	          return null;
+
+	      BSTNode<T> possibleUncle = grandparent.getLeft();
+
+	      if(possibleUncle != node.getParent())
+	          return possibleUncle;
+
+          return null;
+      }
+
+      private BSTNode<T> getGrandparent(BSTNode<T> node) {
+          if(node == null || node.getParent() == null)
+              return null;
+          return node.getParent().getParent();
+      }
 	  
 	
 	  private BSTNode<T> successor(BSTNode<T> node) {

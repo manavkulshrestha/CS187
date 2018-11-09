@@ -89,4 +89,9 @@ public class BSTNode<T extends Comparable<T>> implements BSTNodeInterface<T> {
 			left.printSubtree(spaces + 5);
 		}
 	}
+
+	@Override
+    public String toString() {
+	    return this.data+""+((this.color) ? "R" : "B");
+    }
 }

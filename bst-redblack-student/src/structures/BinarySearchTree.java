@@ -267,8 +267,23 @@ public class BinarySearchTree<T extends Comparable<T>> implements
     @SuppressWarnings("unchecked")
 
 	public void balance() {
-
+		Queue<T> q = new LinkedList<>();
+		inorderTraverse(q, this.root);
+		T[] a = (T[]) new Comparable[q.size()];
+        for(int i=0; i<a.length; i++)
+            a[i] = q.poll();
+		this.root = balance(a, 0, a.length-1);
 	}
+
+	private BSTNode<T> balance(T[] array, int lower, int upper) {
+        if(lower > upper)
+            return null;
+        int middle = (lower+upper)/2;
+        BSTNode<T> node = new BSTNode<>(array[middle], null, null);
+        node.setLeft(balance(array, lower, middle-1));
+        node.setRight(balance(array, middle+1, upper));
+        return node;
+    }
 
 
 	@Override
