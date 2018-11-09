@@ -130,25 +130,18 @@ public class RedBlackTree<T extends Comparable<T>> extends
           }
       }
 
-	  private BSTNode<T> getUncle(BSTNode<T> node) {
-	      BSTNode<T> grandparent = getGrandparent(node);
-	      if(grandparent == null)
-	          return null;
-
-	      BSTNode<T> possibleUncle = grandparent.getLeft();
-
-	      if(possibleUncle != node.getParent())
-	          return possibleUncle;
-
-          return null;
-      }
-
       private BSTNode<T> getGrandparent(BSTNode<T> node) {
           if(node == null || node.getParent() == null)
               return null;
           return node.getParent().getParent();
       }
-	  
+
+	  private BSTNode<T> getUncle(BSTNode<T> node) {
+	      BSTNode<T> grandparent = getGrandparent(node);
+          if(grandparent.getRight() != null && grandparent.getRight() == node.getParent())
+              return node.getParent().getParent().getLeft();
+          return node.getParent().getParent().getRight();
+      }
 	
 	  private BSTNode<T> successor(BSTNode<T> node) {
 		  BSTNode<T> snode = node;
@@ -248,14 +241,55 @@ public class RedBlackTree<T extends Comparable<T>> extends
 	  // then change target node to the child (case 3).
 	  // Step 3: after step 1 and 2, the node must have no child and we can remove it.  
 	  // In the end, if the removed node's color is black, call recover method on its parent node.	  
-	  @Override
-	  public boolean remove(T element) throws NullPointerException {
-	      if(element == null)
-	          throw new NullPointerException();
+      @Override
+      public boolean remove(T element) throws NullPointerException {
+          if(element == null)
+              throw new NullPointerException();
+          if(!contains(element))
+              return false;
+          return remove(getNode(element));
+      }
 
-	      if(!contains(element))
-	          return false;
+    private boolean remove(BSTNode<T> node) {
+        if(node.getLeft() != null && node.getRight() != null) {
+            BSTNode<T> snode = successor(node);
+            node.setData(snode.getData());
+            return remove(snode);
+        }
 
-	      return true;
-	  }
+        if(node.getRight() != null) {
+            node.setData(node.getRight().getData());
+            return remove(node.getRight());
+        }
+
+        if(node.getLeft() != null) {
+            node.setData(node.getLeft().getData());
+            return remove(node.getLeft());
+        }
+
+        if(node.getParent().getLeft() == node)
+            node.getParent().setLeft(null);
+        else
+            node.getParent().setRight(null);
+
+        if(node.getColor() == BSTNode.BLACK)
+            recover(node.getParent());
+
+        return true;
+    }
+
+    private BSTNode getNode(T t) throws NullPointerException {
+        if(t == null)
+            throw new NullPointerException();
+        for(BSTNode<T> node = this.root; node != null;) {
+            T data = node.getData();
+            if(data.compareTo(t) == 0)
+                return node;
+            if(t.compareTo(data) < 0)
+                node = node.getLeft();
+            else
+                node = node.getRight();
+        }
+        return null;
+    }
 }
