@@ -249,9 +249,13 @@ public class RedBlackTree<T extends Comparable<T>> extends
 	  // Step 3: after step 1 and 2, the node must have no child and we can remove it.  
 	  // In the end, if the removed node's color is black, call recover method on its parent node.	  
 	  @Override
-	  public boolean remove(T element) {
-		
-		// TODO
-		return false;
+	  public boolean remove(T element) throws NullPointerException {
+	      if(element == null)
+	          throw new NullPointerException();
+
+	      if(!contains(element))
+	          return false;
+
+	      return true;
 	  }
 }

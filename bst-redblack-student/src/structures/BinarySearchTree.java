@@ -229,15 +229,15 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
     private boolean equals(BSTNode<T> a, BSTNode<T> b) {
-	    if(a == null) {
-	        if(b == null)
-	            return true;
-	        else
-	            return false;
-        } else if(b == null)
+        if (a == b) {
+            return true;
+        }
+        if (a == null || b == null) {
             return false;
-
-        return (equals(a.getLeft(), b.getLeft()) && equals(a.getRight(), b.getRight()));
+        }
+        return a.getData().equals(b.getData()) &&
+                equals(a.getLeft(), b.getLeft()) &&
+                equals(a.getRight(), b.getRight());
     }
 
 	@Override
