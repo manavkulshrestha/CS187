@@ -40,14 +40,6 @@ public class StudentArrayHeap<P, V> extends AbstractArrayHeap<P, V> {
                 swap(parentIndex, index);
                 bubbleUp(parentIndex);
             }
-            //not sure if values are supposed to be compared since no comparator is provided for it.
-
-//            else if(this.comparator.compare(parent.getPriority(), entry.getPriority()) == 0) {
-//                if(((Comparable<V>) parent.getValue()).compareTo(parent.getValue()) < 0) {
-//                    swap(parentIndex, index);
-//                    bubbleUp(parentIndex);
-//                }
-//            }
         } catch(IndexOutOfBoundsException e) {
             return;
         }
@@ -58,6 +50,7 @@ public class StudentArrayHeap<P, V> extends AbstractArrayHeap<P, V> {
         try {
             int leftIndex = getLeftChildOf(index), rightIndex = getRightChildOf(index);
             Entry<P,V> parent = this.heap.get(index), left = this.heap.get(leftIndex), right = this.heap.get(rightIndex);
+
             if(rightIndex<size()
                     && comparator.compare(right.getPriority(), parent.getPriority())>0
                     && comparator.compare(right.getPriority(), left.getPriority())>0) {

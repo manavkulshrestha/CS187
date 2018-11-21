@@ -10,6 +10,6 @@ import java.util.Comparator;
 public class ReverseIntegerComparator implements Comparator<Integer> {
     @Override
     public int compare(Integer arg0, Integer arg1) {
-            return arg1-arg0;
+        return arg1.compareTo(arg0);
     }
 }
