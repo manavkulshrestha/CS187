@@ -32,7 +32,7 @@ public class StudentArrayHeap<P, V> extends AbstractArrayHeap<P, V> {
 
     @Override
     protected void bubbleUp(int index) {
-        if(index<1)
+        if(index < 1)
             return;
         int parentIndex = getParentOf(index);
 
