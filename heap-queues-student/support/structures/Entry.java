@@ -39,4 +39,8 @@ public final class Entry<P, V> {
 	public final V getValue(){
 		return value;
 	}
+
+	public String toString() {
+		return this.priority+":"+this.value;
+	}
 }

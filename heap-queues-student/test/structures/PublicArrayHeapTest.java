@@ -80,7 +80,7 @@ public class PublicArrayHeapTest {
     assertEquals("The second element in the array should be 5.", new Integer(5), view.get(1).getValue());
   }
 	
-  @Test (timeout = 100)
+  @Test
   public void testBubbleUpAndBubbleDown(){
     // The comparator being used prioritizes by the length of the string
     // passed in as a priority

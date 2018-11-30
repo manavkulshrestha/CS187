@@ -32,39 +32,31 @@ public class StudentArrayHeap<P, V> extends AbstractArrayHeap<P, V> {
 
     @Override
     protected void bubbleUp(int index) {
-        try {
-            int parentIndex = getParentOf(index);
-            Entry<P,V> parent = this.heap.get(parentIndex), entry = this.heap.get(index);
-
-            if(this.comparator.compare(parent.getPriority(), entry.getPriority()) < 0) {
-                swap(parentIndex, index);
-                bubbleUp(parentIndex);
-            }
-        } catch(IndexOutOfBoundsException e) {
+        if(index<1)
             return;
+        int parentIndex = getParentOf(index);
+
+        if(comparator.compare(heap.get(parentIndex).getPriority(), heap.get(index).getPriority())<0) {
+            swap(index, parentIndex);
+            bubbleUp(parentIndex);
         }
     }
 
     @Override
     protected void bubbleDown(int index) {
-        try {
-            int leftIndex = getLeftChildOf(index), rightIndex = getRightChildOf(index);
-            Entry<P,V> parent = this.heap.get(index), left = this.heap.get(leftIndex), right = this.heap.get(rightIndex);
-
-            if(rightIndex<size()
-                    && comparator.compare(right.getPriority(), parent.getPriority())>0
-                    && comparator.compare(right.getPriority(), left.getPriority())>0) {
-                swap(rightIndex, index);
-                bubbleDown(rightIndex);
-            } else if(leftIndex<size()
-                    && comparator.compare(left.getPriority(), parent.getPriority())>0) {
-                swap(leftIndex, index);
-                bubbleDown(leftIndex);
-            }
-        } catch(IndexOutOfBoundsException e) {
+        if(index >= size()/2)
             return;
-        }
+        int lIndex = getLeftChildOf(index), rIndex = getRightChildOf(index), lcIndex;
 
+        if(rIndex<size() && comparator.compare(heap.get(lIndex).getPriority(), heap.get(rIndex).getPriority())<0)
+            lcIndex = rIndex;
+        else
+            lcIndex = lIndex;
+
+        if(comparator.compare(heap.get(index).getPriority(), heap.get(lcIndex).getPriority())<0) {
+            swap(index, lcIndex);
+            bubbleDown(lcIndex);
+        }
     }
 }
 
