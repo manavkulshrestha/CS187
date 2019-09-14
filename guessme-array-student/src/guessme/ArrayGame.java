@@ -28,21 +28,22 @@ public class ArrayGame {
 	public ArrayGame() {
 		this.guess = 1000;
 		this.eliminated = new boolean[9000];
-        this.priorGuesses = new int[0];
-    }
+        	this.priorGuesses = new int[0];
+	}
 	
 	// Resets data members and game state so we can play again
 	public void reset() {
-        this.guess = 1000;
-        this.priorGuesses = new int[0];
+		this.guess = 1000;
+		this.priorGuesses = new int[0];
 		this.eliminated = new boolean[9000];
 	}
 	
 	// Returns true if n is a prior guess; false otherwise.
 	public boolean isPriorGuess(int n) {
-	    for(int priorGuess: this.priorGuesses)
-	        if(n == priorGuess)
-	            return true;
+		for(int priorGuess: this.priorGuesses)
+			if(n == priorGuess)
+				return true;
+		
 		return false;
 	}
 	
@@ -62,11 +63,12 @@ public class ArrayGame {
 	 *   1000 and 9000 have 3 matches (three 0's).
 	 */
 	public static int numMatches(int a, int b) { // DO NOT remove the static qualifier
-		// TODO
-        int matches = 0;
+        	int matches = 0;
+		
 		for(int i=0; i<4; i++, a/=10, b/=10)
 		    if(a%10 == b%10)
 		        matches++;
+		
 		return matches;
 	}
 	
@@ -78,17 +80,19 @@ public class ArrayGame {
 	public boolean isOver() {
 		if(isPriorGuess(this.guess))
 		    return true;
+		
 		return false;
 	}
 	
 	// Returns the guess number and adds it to the list of prior guesses.
 	public int getGuess() {
-        int[] temp = new int[this.priorGuesses.length+1];
+		int[] temp = new int[this.priorGuesses.length+1];
 
-        for(int i=0; i<this.priorGuesses.length; i++)
-            temp[i] = this.priorGuesses[i];
-        temp[this.priorGuesses.length] = this.guess;
-        this.priorGuesses = temp;
+		for(int i=0; i<this.priorGuesses.length; i++)
+		    temp[i] = this.priorGuesses[i];
+
+		temp[this.priorGuesses.length] = this.guess;
+		this.priorGuesses = temp;
 
 		return guess;
 	}
@@ -102,31 +106,32 @@ public class ArrayGame {
 	 * have been eliminated (indicating a state of error);
 	 */
 	public boolean updateGuess(int nmatches) {
-        boolean nextGuessEstablished = false;
-        int nextGuess = -1;
-        final int OFFSET = 1000;
+		boolean nextGuessEstablished = false;
+		int nextGuess = -1;
+		final int OFFSET = 1000;
 
-        for(int i=0; i<eliminated.length; i++) {
+		for(int i=0; i<eliminated.length; i++) {
 			if(!eliminated[i]) {
-                if(numMatches(i+OFFSET, this.guess) == nmatches) {
-                    if(!nextGuessEstablished) {
-                        nextGuessEstablished = true;
-                        nextGuess = i+OFFSET;
-                    }
-                } else
-                    this.eliminated[i] = true;
+				if(numMatches(i+OFFSET, this.guess) == nmatches) {
+					if(!nextGuessEstablished) {
+						nextGuessEstablished = true;
+						nextGuess = i+OFFSET;
+					}
+				} else
+					this.eliminated[i] = true;
 			}
 		}
 
-        if(nextGuess == -1)
-            return false;
-        this.guess = nextGuess;
+		if(nextGuess == -1)
+		    return false;
+		
+		this.guess = nextGuess;
 
-        for(boolean e: eliminated)
-            if(!e)
-                return true;
-        return false;
-
+		for(boolean e: eliminated)
+		    if(!e)
+			return true;
+		
+		return false;
 	}
 	
 	// Returns the list of guesses so far as an integer array.
